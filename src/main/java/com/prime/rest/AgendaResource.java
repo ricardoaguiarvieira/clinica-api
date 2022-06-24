@@ -33,8 +33,8 @@ public class AgendaResource {
 	AgendaService agendaService;
 	
 	@POST
-	@Operation(summary = "salvar agendamento", description = "")
-    @APIResponse(responseCode = "200", description = "Agendamento",
+	@Operation(summary = "Salvar agendamento", description = "")
+    @APIResponse(responseCode = "200", description = "AgendamentoDto",
         content = { @Content(mediaType = "application/json",
             schema = @Schema(implementation = AgendamentoDto.class))})
     public Response saveAgendamento(AgendamentoDto agendamento) {
@@ -46,7 +46,7 @@ public class AgendaResource {
 	@GET
 	@Path("{data}")
 	@Operation(summary = "Agendamentos por data", description = "Example data: 'dd/mm/yyyy'")
-    @APIResponse(responseCode = "200", description = "Agendamentos",
+    @APIResponse(responseCode = "200", description = "AgendamentoDto",
         content = { @Content(mediaType = "application/json",
             schema = @Schema(implementation = AgendaDentistaDto[].class))})
     public Response getAgendamentoPorData(@PathParam("data") String data) {
@@ -62,7 +62,7 @@ public class AgendaResource {
 	
 	@PUT
 	@Operation(summary = "Atualizar agendamento", description = "")
-    @APIResponse(responseCode = "200", description = "Agendamento",
+    @APIResponse(responseCode = "200", description = "AgendamentoDto",
         content = { @Content(mediaType = "application/json",
             schema = @Schema(implementation = AgendamentoDto.class))})
     public Response updateAgendamento(AgendamentoDto agendamento) {
@@ -74,7 +74,7 @@ public class AgendaResource {
 	@DELETE
 	@Path("{id}")
 	@Operation(summary = "Deletar agendamento", description = "")
-    @APIResponse(responseCode = "200", description = "Agendamento",
+    @APIResponse(responseCode = "200", description = "AgendamentoDto",
         content = { @Content(mediaType = "application/json",
             schema = @Schema(implementation = AgendamentoDto.class))})
     public Response deleteAgendamento(@PathParam("id") Long id) {

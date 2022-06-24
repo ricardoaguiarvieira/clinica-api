@@ -23,8 +23,8 @@ public class FuncionarioModel implements Serializable {
 	@Column(name = "nome")
 	private String nome;
 	 
-	@Column(name = "senha")
-	private String senha;
+//	@Column(name = "senha")
+//	private String senha;
 
 	public Integer getMatricula() {
 		return matricula;
@@ -42,12 +42,12 @@ public class FuncionarioModel implements Serializable {
 		this.nome = nome;
 	}
 
-	public String getSenha() {
-		return senha;
-	}
-
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
+//	public String getSenha() {
+//		return senha;
+//	}
+//
+//	public void setSenha(String senha) {
+//		this.senha = senha;
+//	}
 	
 }

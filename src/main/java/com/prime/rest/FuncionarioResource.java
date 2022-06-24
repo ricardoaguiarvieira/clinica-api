@@ -13,7 +13,7 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import com.prime.service.FuncionarioService;
 
 @Path("/funcionario")
-@Tag(name = "Funcionario")
+@Tag(name = "Funcionário")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class FuncionarioResource {
