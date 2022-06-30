@@ -82,5 +82,16 @@ public class AgendaResource {
 		return Response.status(Response.Status.OK).entity(
 				agendaService.deleteAgendamento(id)).build();
     }
+	
+	@GET
+	@Path("horarios")
+	@Operation(summary = "Horarios Disponíveis", description = "Recupera horarios disponíveis")
+    @APIResponse(responseCode = "200", description = "AgendamentoDto",
+        content = { @Content(mediaType = "application/json",
+            schema = @Schema(implementation = String[].class))})
+    public Response getHorarios(@PathParam("data") String data) {
+			return Response.status(Response.Status.OK).entity(
+					agendaService.getHorarios()).build();
+    }
 
 }

@@ -1,7 +1,5 @@
 package com.prime.dto;
 
-import java.util.List;
-
 import com.prime.model.FuncionarioModel;
 
 import lombok.Getter;
@@ -13,7 +11,7 @@ public class AgendaDentistaDto {
 	
 	private Integer matriculaDentista;
 	private String nomeDentista;
-	private List<AgendamentoDto> agenda;
+	private AgendamentoDto[] agenda;
 	
 	public AgendaDentistaDto(FuncionarioModel f) {
 		this.matriculaDentista = f.getMatricula();

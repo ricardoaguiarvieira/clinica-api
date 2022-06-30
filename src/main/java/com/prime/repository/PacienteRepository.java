@@ -1,7 +1,5 @@
 package com.prime.repository;
 
-import java.util.List;
-
 import javax.enterprise.context.ApplicationScoped;
 
 import com.prime.model.PacienteModel;
